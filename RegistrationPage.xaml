@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink2.RegistrationPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+            <Label Text="Registration" TextColor="White" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+            <Entry Placeholder="Full Name" BackgroundColor="White" Margin="0,5" />
+            <Entry Placeholder="Email" Keyboard="Email" BackgroundColor="White" Margin="0,5" />
+            <Entry Placeholder="Password" IsPassword="True" BackgroundColor="White" Margin="0,5" />
+
+            <!-- Gender Radio Buttons -->
+            <VerticalStackLayout Margin="0,10">
+                <Label Text="Gender" TextColor="White"/>
+                    <RadioButton Content="  Male" />
+                    <RadioButton Content="  Female"/>
+            </VerticalStackLayout>
+
+            <Button Text="Register" Clicked="OnRegisterClicked" BackgroundColor="White" TextColor="Black" Margin="0,0"/>
+            <Label Text="Back to Login" TextColor="White" Margin="0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

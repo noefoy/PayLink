@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:PayLink2"
+            x:Class="PayLink2.MainPage">
+
+    <!-- Wallet Tab -->
+    <ContentPage Title="Wallet" >
+        <ScrollView>
+        <StackLayout>
+            <!-- Your virtual cards go here -->
+            <StackLayout Margin="15" BackgroundColor="#EDEDED" Padding="10">
+                <Label Text="Balance: $68.79" FontSize="30" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <BoxView Color="Green" HeightRequest="2" HorizontalOptions="StartAndExpand" Margin="0,5,0,10" />
+              <Image Source="card.png" HeightRequest="200" HorizontalOptions="CenterAndExpand">
+                </Image>
+                <Label Text="Raiffeisen Debit Card" FontSize="20" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+             <StackLayout Margin="15" BackgroundColor="#EDEDED" Padding="10">
+                <Label Text="Balance: $129.05" FontSize="30" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <BoxView Color="Green" HeightRequest="2" HorizontalOptions="StartAndExpand" Margin="0,5,0,10" />
+              <Image Source="card2.png" HeightRequest="200" HorizontalOptions="CenterAndExpand">
+                </Image>
+                <Label Text="American Express Credit Card" FontSize="20" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+             <StackLayout Margin="15" BackgroundColor="#EDEDED" Padding="10">
+                <Label Text="Balance: $4.75" FontSize="30" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <BoxView Color="Green" HeightRequest="2" HorizontalOptions="StartAndExpand" Margin="0,5,0,10" />
+                <Image Source="card1.png" HeightRequest="200" HorizontalOptions="CenterAndExpand">
+                </Image>
+                 <Label Text="PayLink Virtual Card" FontSize="20" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+        </StackLayout>
+         </ScrollView>
+    </ContentPage>
+
+    <!-- Home Tab -->
+    <ContentPage Title="Home">
+
+    <StackLayout>
+        <!-- Your main content goes here -->
+        <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand" BackgroundColor="#EDEDED" Padding="10">
+        <Label Text="Balance: $423.22" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="10" WidthRequest="200" />
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand" BackgroundColor="#EDEDED" Padding="10">
+            <Button Text="Send" Clicked="OnSendButtonClicked" Margin="5" WidthRequest="100" />
+            <Button Text="Request" Clicked="OnRequestButtonClicked" Margin="5" WidthRequest="100" />
+        </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand" BackgroundColor="#EDEDED" Padding="10">
+            <Button Text="Transactions" Clicked="OnTransactionButtonClicked" Margin="10" WidthRequest="200" />
+        </StackLayout>
+    </StackLayout>
+    </ContentPage>
+
+
+
+    <!-- Settings Tab -->
+    <ContentPage Title="Settings">
+        <StackLayout>
+            <Label Text="Welcome to Settings Tab" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>

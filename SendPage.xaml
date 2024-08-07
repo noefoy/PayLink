@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink2.SendPage"
+             Title="Send Money">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+
+            <!-- Balance -->
+
+        <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand" BackgroundColor="#EDEDED" Padding="10">
+        <Label Text="Balance: $423.22" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="10" WidthRequest="200" />
+        </StackLayout>
+            <Label Text="Enter the amount to send:"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <!-- Amount Entry -->
+            <Entry x:Name="AmountEntry" Placeholder="Amount" Keyboard="Numeric" Margin="10" />
+
+            <!-- Contacts Picker -->
+            <Picker x:Name="ContactsPicker" Title="Select contact" Margin="10">
+                <!-- Populate picker items with contacts -->
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Tobias Brasser</x:String>
+                        <x:String>Manuel Möri</x:String>
+                        <x:String>Luana Flückiger</x:String>
+                        <x:String>David Borne</x:String>
+                        <x:String>Flavia Brasser</x:String>
+                        <x:String>Niccolo Iseli</x:String>
+                        <x:String>Bing Bong</x:String>
+                        <x:String>Vincent Wixmann</x:String>
+                        <x:String>Rayon Von May</x:String>
+                        <x:String>Arthur Doierlein</x:String>
+                        <x:String>Barack Obama</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Send Button -->
+            <Button Text="Send" Clicked="OnSendButtonClicked" Margin="10" />
+
+            <!-- Error Prompt -->
+            <Label x:Name="ErrorLabel" Text="" TextColor="Red" IsVisible="False" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

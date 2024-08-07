@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PayLink2.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+            <!-- Logo -->
+            <Image Source="logo_text.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="CenterAndExpand"/>
+
+            <!-- Login Page -->
+            <StackLayout x:Name="LoginStackLayout" IsVisible="True" Padding="20">
+
+                <Entry Placeholder="Username" BackgroundColor="White" Margin="0,10" />
+                <Entry Placeholder="Password" BackgroundColor="White" IsPassword="True" Margin="0,10" />
+                <Button Text="Login" Clicked="OnLoginClicked" BackgroundColor="White" TextColor="Black" Margin="0,10" />
+                <Label Text="Forgot password?" TextColor="White" Margin="0,10"/>
+
+                <!-- Register Button -->
+                <Button Text="Register" Clicked="OnRegisterClicked" BackgroundColor="White" TextColor="Black"/>
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
